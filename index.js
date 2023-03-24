@@ -2,7 +2,8 @@ const Redis = require('ioredis');
 const client = new Redis({
     host: 'redis-master.rehook-redis.svc',
     port: 6379,
-    password: 'dSO7HOi7aY'
+    password: 'dSO7HOi7aY',
+    keyPrefix: "rehook:"
 });
 
 client.ping((error, result) => {
